@@ -16,7 +16,7 @@ const genresData = [
 
 const Header = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [hoveredGenre, setHoveredGenre] = useState(null);
+  const [hoverGenre, setHoverGenre] = useState(null);
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
@@ -32,7 +32,7 @@ const Header = () => {
   };
 
   const handleGenreHover = (genre) => {
-    setHoveredGenre(genre);
+    setHoverGenre(genre);
   };
 
 
@@ -67,10 +67,10 @@ const Header = () => {
         </div>
       )}
 
-      {hoveredGenre && (
+      {hoverGenre && (
         <div className="fixed top-0 right-0 bg-gray-800 bg-opacity-75 z-20 w-[250px] h-[99%] mt-14">
           <div className="container mx-auto p-4 bg-green-500 text-black h-full">
-            <BookList books={hoveredGenre.books} />
+            <BookList books={hoverGenre.books} />
           </div>
         </div>
       )}
