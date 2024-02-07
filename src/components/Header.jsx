@@ -68,7 +68,7 @@ const Header = () => {
       )}
 
       {hoverGenre && (
-        <div className="fixed top-0 right-0 bg-gray-800 bg-opacity-75 z-20 w-[250px] h-[99%] mt-14">
+        <div className=" fixed top-0 right-0 bg-gray-800 bg-opacity-75 z-20 w-[83%] h-[99%] mt-14">
           <div className="container mx-auto p-4 bg-green-500 text-black h-full">
             <BookList books={hoverGenre.books} />
           </div>
